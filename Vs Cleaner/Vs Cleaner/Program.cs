@@ -4,25 +4,30 @@ using System.Text.RegularExpressions;
 
 namespace Vs_Cleaner
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            if (args == null || args.Length == 0)
-            {
-                var applicationRootPath = AppDomain.CurrentDomain.BaseDirectory;
-                CleanFolder(applicationRootPath);
-            }
-            else
-            {
-                foreach (var arg in args)
-                {
-                    CleanFolder(arg);
-                }
-            }
+            var applicationRootPath = @"C:\Users\jebb.burditt\Documents\BitBucket\Medweb.Cloud\Cloud";
+            CleanFolder(applicationRootPath);
+
+            applicationRootPath = @"C:\Users\jebb.burditt\Documents\BitBucket\Medweb.Cloud\External Sources";
+            CleanFolder(applicationRootPath);
+            //if (args == null || args.Length == 0)
+            //{
+            //    var applicationRootPath = AppDomain.CurrentDomain.BaseDirectory;
+            //    CleanFolder(applicationRootPath);
+            //}
+            //else
+            //{
+            //    foreach (var arg in args)
+            //    {
+            //        CleanFolder(arg);
+            //    }
+            //}
         }
 
-        static void CleanFolder(string rootDirectoryPath)
+        public static void CleanFolder(string rootDirectoryPath)
         {
             Console.WriteLine($"Cleaning filepath '{rootDirectoryPath}'.");
 
