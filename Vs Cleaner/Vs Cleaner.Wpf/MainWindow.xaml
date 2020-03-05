@@ -5,11 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Vs_Cleaner.Wpf"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Button x:Name="selectFolderButton" Content="Select Project Folder" HorizontalAlignment="Left" Margin="424,147,0,0" VerticalAlignment="Top" Width="131" Click="SelectFolderButton_Click"/>
-        <TextBox x:Name="projectFolderPath" HorizontalAlignment="Left" Height="23" Margin="150,148,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="259"/>
-        <Button x:Name="cleanProjectButton" Content="Clean bin and obj" HorizontalAlignment="Left" Margin="424,191,0,0" VerticalAlignment="Top" Width="131" Click="cleanProjectButton_Click"/>
+        Title="VS Cleaner" Height="234" Width="551">
+    <Grid Margin="0,0,2,4">
+        <Button x:Name="selectFolderButton" Content="Select project folder" HorizontalAlignment="Left" Margin="342,80,0,0" VerticalAlignment="Top" Width="131" Click="SelectFolderButton_Click" Height="28"/>
+        <TextBox x:Name="projectFolderPath" HorizontalAlignment="Left" Height="28" Margin="57,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="259"/>
+        <Button x:Name="cleanProjectButton" Content="Clean bin and obj" HorizontalAlignment="Left" Margin="342,123,0,0" VerticalAlignment="Top" Width="131" Click="cleanProjectButton_Click" Height="28"/>
+        <Label Content="Folder Path" HorizontalAlignment="Left" Margin="57,49,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

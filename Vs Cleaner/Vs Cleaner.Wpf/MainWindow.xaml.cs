@@ -1,6 +1,5 @@
 ﻿using System.Windows;
 using System.Windows.Forms;
-using Vs_Cleaner;
 
 namespace Vs_Cleaner.Wpf
 {

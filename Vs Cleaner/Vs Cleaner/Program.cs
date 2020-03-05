@@ -8,23 +8,18 @@ namespace Vs_Cleaner
     {
         static void Main(string[] args)
         {
-            var applicationRootPath = @"C:\Users\jebb.burditt\Documents\BitBucket\Medweb.Cloud\Cloud";
-            CleanFolder(applicationRootPath);
-
-            applicationRootPath = @"C:\Users\jebb.burditt\Documents\BitBucket\Medweb.Cloud\External Sources";
-            CleanFolder(applicationRootPath);
-            //if (args == null || args.Length == 0)
-            //{
-            //    var applicationRootPath = AppDomain.CurrentDomain.BaseDirectory;
-            //    CleanFolder(applicationRootPath);
-            //}
-            //else
-            //{
-            //    foreach (var arg in args)
-            //    {
-            //        CleanFolder(arg);
-            //    }
-            //}
+            if (args == null || args.Length == 0)
+            {
+                var applicationRootPath = AppDomain.CurrentDomain.BaseDirectory;
+                CleanFolder(applicationRootPath);
+            }
+            else
+            {
+                foreach (var arg in args)
+                {
+                    CleanFolder(arg);
+                }
+            }
         }
 
         public static void CleanFolder(string rootDirectoryPath)
